@@ -1,35 +1,61 @@
+@font-face {
+    font-family:"Lobster Regular";
+    src: url(../font/Lobster/Lobster-Regular.ttf);
+}
+
+
+
+
 body {
-    background-color: black;
-    color: white;
+    background-color: rgb(40, 38, 38);
+    color: #DCD6C5;
+    font-family:"Lobster Regular";
     
 }
 h1{
     text-align: center;
     font-size: 4rem;
     
-    color: black;
+    color: #DCD6C5;
     position: relative;
-    top: 100px;
+    
     
 }
 
 h2{
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+}
+h3{
     font-size: 3rem;
     text-align: center;
 }
+
 footer{
     font-size: 30px;
     text-align: center;
 }
 a{
-    color: black;
+    color: #DCD6C5;
     text-decoration: none;
+    position: relative;
 }
-a:hover{
-    color:white;
-    text-decoration:underline;
-    text-decoration-color:darkblue;
+a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 
+}
+a:hover::before{
+    transform: scaleX(1);
 }
 
 footer {
@@ -40,24 +66,35 @@ footer {
 }
 
 .logo{
-    width: 15vw;
-    height: 15vw;
+    width: 35vw;
+    height: 35vw;
+    opacity: 1;
+    position: fixed;
+    top: 70px;
+    left: 32vw;
+    padding: 0px 0px 0px 0px;
     
-    position:fixed;
-    top: 0px;
-    left: 0px;
+    
     
 
     
 }
 
+  
+
+/* .container2 {
+    height: 500px; 
+} */
+  
+
+
+
 .menu{
     text-align: center;
-    background-image: url(../img/valence.jpg);
+    
     
     height: 600px;
-    background-size: 100vw;
-    background-repeat: no-repeat;
+    
     margin: -10px;
     
     
@@ -73,19 +110,21 @@ footer {
     justify-content:center;
     align-items: center;
     margin: 0px 0px;
-    padding: 0px 50px 0px 0px;
+    padding: 0px 50px 0px 500px;
+    position:fixed;
+    
 }
 
 .menu ul li{
     padding: 30px ;
-
+    
 }
 
 
 .presentation{
     text-align: center;
     font-size: 20px ;
-    padding: 0px 0px 100px 0px;
+    padding: 100px 0px 100px 0px;
     
 }
 
@@ -105,6 +144,12 @@ footer {
     padding: 0px 0px 100px 0px;
     
 }
+.container{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 30px 0px 0px 0px;
+
+}
 .invest{
     text-align: center;
     font-size: 20px ;
@@ -112,12 +157,66 @@ footer {
     
 }
 
+.connector {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+  
+  
+  
+  
+.number {
+    display:flex;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    float: left;
+    /* border: solid black 1px; */
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 90px;
+    font-family:"Lobster Regular";
+    
+
+}
+  
+.arrow {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.photo2{
+    width: 150px;
+    height: 100px;
+    
+    /* border: 1px solid black; */
+    
+}
+.photo3{
+    width: 150px;
+    height: 90px;
+    
+    /* border: 1px solid black; */
+    
+}
+.photo4{
+    width: 200px;
+    height: 200px;
+    
+    border: 1px solid black;
+    
+}
+  
+
+
 
   
 .footercolor {
     background-color: rgb(91, 91, 91);
     margin: 0px 0px -10px -10px;
-    color: white;
+    color: #DCD6C5;
     height: 380px;
 }
   
@@ -142,6 +241,8 @@ footer {
   
 .bi {
     color: red;
+    width: 50px;
+    height: 50px;
 }
   
 .nav {
@@ -160,6 +261,7 @@ footer {
 .logo2 {
     width: 10vw;
     
+    
     position: relative;
     left: 0px;
     padding:0px 20px 0px 20px;
@@ -169,17 +271,29 @@ footer {
 
 
 .photo{
-    width: 400px;
-    height: 200px;
+    width: 200px;
+    height: 400px;
+    display: inline;
+    float: left;
+    /* border: 1px solid black; */
+    
 }
+.photo1{
+    width: 200px;
+    height: 200px;
+    
+    /* border: 1px solid black; */
+    
+}
+
 
 .premier{
     border: 1px solid black;
     overflow: hidden;
     display: inline-block;
-    width: 400px;
+    width: 800px;
     box-shadow: 3px 3px 10px gray;
-    height: 600px;
+    height: 350px;
     margin: 0px 50px 0px 0px ;
     position: relative;
     background-color: rgb(25, 24, 24);
@@ -189,14 +303,27 @@ footer {
     border: 1px solid black;
     overflow: hidden;
     display: inline-block;
-    width: 400px;
-    height: 600px;
+    width: 800px;
+    height: 350px;
     box-shadow: 3px 3px 10px gray;
     position: relative;
     background-color: rgb(25, 24, 24);
 }
 
 .troisieme{
+    border: 1px solid black;
+    overflow: hidden;
+    display: inline-block;
+    width: 400px;
+    box-shadow: 3px 3px 10px gray;
+    height: 600px;
+    margin: 0px 50px 0px 0px ;
+    position: relative;
+    background-color: rgb(25, 24, 24);
+
+}
+
+.quatrième{
     border: 1px solid black;
     overflow: hidden;
     display: inline-block;
@@ -211,7 +338,7 @@ footer {
 
 .btn1{
     background-color: darkblue;
-    color: white;
+    color: #DCD6C5;
     padding: 10px 15px;
     border: 1px solid darkblue;
     text-decoration: none;
@@ -231,7 +358,7 @@ footer {
 
 .btn2{
     background-color: darkblue ;
-    color: white;
+    color: #DCD6C5;
     padding: 10px 15px;
     border: 1px solid darkblue;
     text-decoration: none;
@@ -245,25 +372,39 @@ footer {
     background-color: gray;
     color: black;
 }
+.circle {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(30, 30, 30);
+    border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DCD6C5;
+    position: relative;
+    box-shadow: 3px 3px 20px gray;
+    
 
-.btn3{
-    background-color: darkblue;
-    color: white;
-    padding: 10px 15px;
-    border: 1px solid darkblue;
-    text-decoration: none;
-    position: absolute;
-    top:540px;
-    left: 100px;
+}
+.text2{
+    font-size: 35px;
+}
+.text3{
+    font-size: 25px;
+    text-align: center;
+    
+    height: 100px;
+    width: 300px;
+    
+}
+.text4{
+    font-size: 25px;
+    
+    
+    
 
 
 }
-
-.btn3:hover{
-    background-color: gray;
-    color: black;
-}
-
 
 @media screen and (max-width:576px){
     h2,h3,h4,h5,h6{
@@ -271,12 +412,12 @@ footer {
     }
     h1{
         font-size: 3rem;
-        color: white;
+        color: #DCD6C5;
         background-color: black;
         top: 25px;
     }
     a{
-        color: white;
+        color: #DCD6C5;
     }
     a:hover{
         color:rgb(28, 28, 150)
